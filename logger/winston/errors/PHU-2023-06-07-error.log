@@ -1,0 +1,5 @@
+Wed Jun 07 2023-->10:21:22--> [PH] error: User validation failed: role: Path `role` is required.
+Wed Jun 07 2023-->10:22:38--> [PH] error: Field `rolessss` is not in schema and strict mode is set to throw.
+Wed Jun 07 2023-->10:24:9--> [PH] error: User validation failed: role: Path `role` is required.
+Wed Jun 07 2023-->10:36:23--> [PH] error: User validation failed: role: Path `role` is required.
+Wed Jun 07 2023-->10:36:23--> [PH] error: globalErrorHandler: User validation failed: role: Path `role` is required.

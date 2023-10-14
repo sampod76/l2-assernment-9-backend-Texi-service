@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side-2\\logger\\winston\\successes\\.73e7de8764244ab7b98bdc2254ad8850d1825abd-audit.json",
+    "files": [
+        {
+            "date": 1697272032671,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side-2\\logger\\winston\\successes\\PHU-2023-10-14-14-success.log",
+            "hash": "c1352cd327bbf7ffb083be2d369d5ddd5fb190ce7bb8fc7ba4d44246d47ddbde"
+        }
+    ],
+    "hashType": "sha256"
+}

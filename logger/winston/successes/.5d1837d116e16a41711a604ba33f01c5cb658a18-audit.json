@@ -1,0 +1,235 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\.5d1837d116e16a41711a604ba33f01c5cb658a18-audit.json",
+    "files": [
+        {
+            "date": 1686285290182,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-09-10-success.log",
+            "hash": "73e643790dfb87e314db557fa0420f4716d3884a86af7d3a07056437ddce0b2c"
+        },
+        {
+            "date": 1686288080870,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-09-11-success.log",
+            "hash": "050b5d1fde540ba5e999f67ac072d82a8e5044e20ebb0f4256b14bee28a63699"
+        },
+        {
+            "date": 1686376588627,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-11-success.log",
+            "hash": "4cb66834d7e4ce801340c61020493ce02058cd6828a1bd3fe70c3154cb862f06"
+        },
+        {
+            "date": 1686377298989,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-12-success.log",
+            "hash": "9cdb1487349d4cba6db1a43dd46d7dd89d3a87f26948f2416a20b032fcde1927"
+        },
+        {
+            "date": 1686382681999,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-13-success.log",
+            "hash": "a9df1b39e94713e6f639e879168548256f8d9a177af3666cacf3e33d2596579e"
+        },
+        {
+            "date": 1686408016421,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-20-success.log",
+            "hash": "a9d5151384e81b63565e0fb4a2e2f2b9e87ea0eead172c31e582ee67d941f550"
+        },
+        {
+            "date": 1686409616002,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-21-success.log",
+            "hash": "5a2af26d654f8dc8d38be712767078b90b88fbada40832c1feeddc55dcd232e1"
+        },
+        {
+            "date": 1686416463852,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-10-23-success.log",
+            "hash": "5ba61e3b862ea0b7c40bd33bf4e74b742a46fb816245d959fd7f6fe5bb0d535f"
+        },
+        {
+            "date": 1686424178421,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-01-success.log",
+            "hash": "cb70d69467c81e1dcdd62b534f68841d49c007cce7d46d535ff6b446877362a9"
+        },
+        {
+            "date": 1686429511631,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-02-success.log",
+            "hash": "2af003f4af8edff02af401825959dd8967efb1db2217a69dfafd77446b854e68"
+        },
+        {
+            "date": 1686431307029,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-03-success.log",
+            "hash": "9805ad7c45ea503457e63929e2790e884799b468e2730a65f90e589251e4c629"
+        },
+        {
+            "date": 1686471458671,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-14-success.log",
+            "hash": "1d9887f346d94775244cde64b50a708019ad025aefabcca549bbb0f1248444db"
+        },
+        {
+            "date": 1686474004643,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-15-success.log",
+            "hash": "6305e03e20953b0019c2cd6184ff538f3823efcedc114f74df2694d920f04b66"
+        },
+        {
+            "date": 1686477719292,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-16-success.log",
+            "hash": "b6743ed06d871be6ca669e9ecdabc75849e74360b324f06703e29d65a0ff3b01"
+        },
+        {
+            "date": 1686481215858,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-11-17-success.log",
+            "hash": "f441086f8d8811838835725406f269bb1584a8cf295d222c9dbe0f416f01048d"
+        },
+        {
+            "date": 1686560314928,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-12-14-success.log",
+            "hash": "876a4678e50edc4868d98157497011e386e67c47647c9e3850cae65d88851450"
+        },
+        {
+            "date": 1686560725835,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-12-15-success.log",
+            "hash": "f3226fdeaed52cb1d27320ac8b04bb9e1e0eca0390ee9c79ab1c12bb4dfa8bdd"
+        },
+        {
+            "date": 1686564762914,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-12-16-success.log",
+            "hash": "1711da8fd98c793c01544282377ad078986d77feb7b46419a92ee5e8d3c24449"
+        },
+        {
+            "date": 1686569763238,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-12-17-success.log",
+            "hash": "f0cab8b300633910de7fa6e3c1c4a53b3ff4f5946a99879e4fd1ddcdc6769974"
+        },
+        {
+            "date": 1686595913688,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-13-00-success.log",
+            "hash": "d790cd653857b4ee3b43f379f529b8b980448dc0ac9c650f80ef0977ee72e45e"
+        },
+        {
+            "date": 1686638176682,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-13-12-success.log",
+            "hash": "202dfd745f5a9920ef40fb07e86312f2fb8857f84b058b4fa144a4ef75bceedb"
+        },
+        {
+            "date": 1686639811832,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-13-13-success.log",
+            "hash": "3e6f27f44946815874870add69a343b266e97d4d5cd1bd157d6c7778295c1601"
+        },
+        {
+            "date": 1686684328095,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-14-01-success.log",
+            "hash": "d2436a3c99c00cf5345efd2173cda2510d5958debdfba89b18de8a8a56a627b4"
+        },
+        {
+            "date": 1686686425995,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-14-02-success.log",
+            "hash": "205ddc47466058c084281a34dd0b89c679c0b52ceb065a097b70db46d48406cc"
+        },
+        {
+            "date": 1686813902732,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-15-13-success.log",
+            "hash": "dc436352247fb047e16772d1f0790e979484263573f97ec3d514a5725233ed67"
+        },
+        {
+            "date": 1686816459203,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-15-14-success.log",
+            "hash": "7ae48b91889cfea751eb98f4da9491578f244eb3524f605819e5f7a61874adf9"
+        },
+        {
+            "date": 1686895457937,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-16-12-success.log",
+            "hash": "9d60f7aced2f52159de7d6b3bbca44841c894a7f8364b9f71dea2cd051877ce8"
+        },
+        {
+            "date": 1686994150964,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-17-15-success.log",
+            "hash": "564ee6d347c7e4d1d645f7fd8563e40503148aaab95cdb9f677b18f33d11e1a8"
+        },
+        {
+            "date": 1686996015922,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-17-16-success.log",
+            "hash": "d4aff744c6c0a3a20b413b59413d4a9fef6345eba2d9c03d8f938f33291768e5"
+        },
+        {
+            "date": 1687014595613,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-17-21-success.log",
+            "hash": "0a096f90c8d820aa23bfae37a93d16178b3ce3503e2bb7a02fb176d0ce2f54e4"
+        },
+        {
+            "date": 1687069795868,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-12-success.log",
+            "hash": "56e676d9c0583f55ce3ff5cfae55b72f2682fb457bf432d067ce2a964d0a0281"
+        },
+        {
+            "date": 1687072042691,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-13-success.log",
+            "hash": "44993ae64ac701f95674908026f199d50f53f6a33ac6b2c6fb9e5a5d6ac500c4"
+        },
+        {
+            "date": 1687075835081,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-14-success.log",
+            "hash": "7e2308f09eb079822cfd3675fe63f75e1219ff45596f593caef131163b774b10"
+        },
+        {
+            "date": 1687078926505,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-15-success.log",
+            "hash": "5a23fa44d35a02ff48d4a80918eafe53295215cc1db6c0fa86ebcca7b610c118"
+        },
+        {
+            "date": 1687083054536,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-16-success.log",
+            "hash": "3cae1d4cb23bd286359054c107093c0b6a8efc9a34893e0ceae2bd76244a548a"
+        },
+        {
+            "date": 1687086076347,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-18-17-success.log",
+            "hash": "483c2303bb61e1b4b1f6b8d68c770029e64430078b63a06260d2ccb0dc732033"
+        },
+        {
+            "date": 1687117982320,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-19-01-success.log",
+            "hash": "e1e3297535a6f224600c761afa0f990e1ae9c3daef0c17a766bb9ebfb7a6bf38"
+        },
+        {
+            "date": 1687119758184,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-19-02-success.log",
+            "hash": "5421505f00d7c7ea7eba89c8145d892463a4bb3e36e72afbf1178eb081237739"
+        },
+        {
+            "date": 1687383679141,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-03-success.log",
+            "hash": "11a2550c6d003f7fe2d43195370ed674c8b925c12eaf656d48ce40e24de1783c"
+        },
+        {
+            "date": 1687384825759,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-04-success.log",
+            "hash": "f284ad82525e290e9fa1758fca98dc6cb3a3baf1ad1bc43eed469df33c99923c"
+        },
+        {
+            "date": 1687419160770,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-13-success.log",
+            "hash": "4ce6ccb8b160ff2e6a21c206c3882de971019bd6e5cf768d388c44d3fe3c81f1"
+        },
+        {
+            "date": 1687420815166,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-14-success.log",
+            "hash": "e5b730cc701b79717f9f4984ec216da47bdfa665fb9e2de2c7c015b21c21c959"
+        },
+        {
+            "date": 1687424706840,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-15-success.log",
+            "hash": "f31138cf1c78d440c472d4135bae73fa31f595560c6104dc0ca225992865ca47"
+        },
+        {
+            "date": 1687428011257,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-22-16-success.log",
+            "hash": "4318f893ab9710d2e0c9d67ed7191e996dfee5aa53f474e7d261dbdd4efb8ab9"
+        },
+        {
+            "date": 1687466863757,
+            "name": "F:\\programming hero\\Web_Lavel_2\\University-project\\module_12_auth_service_looger\\logger\\winston\\successes\\PHU-2023-06-23-02-success.log",
+            "hash": "b7978b6b0fb40f4a3df1a7fc7048b53ba33f35202715b5b32d1509c9123a030a"
+        }
+    ],
+    "hashType": "sha256"
+}
