@@ -25,6 +25,18 @@ const loginUserFromDb = async (
     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect');
   }
 
+  const allData=await User.findOne({email}).populate([
+    {
+      path:'admin'
+    },
+    {
+      path:'generalUser'
+    },
+    {
+      path:'superAdmin'
+    }
+  ])
+
 
 
   const accessToken = jwtHelpers.createToken(
@@ -32,6 +44,7 @@ const loginUserFromDb = async (
       _id: isUserExist._id,
       email: isUserExist.email,
       role: isUserExist.role,
+      otherData:allData
     },
     config.jwt.secret as Secret,
     config.jwt.expires_in as string

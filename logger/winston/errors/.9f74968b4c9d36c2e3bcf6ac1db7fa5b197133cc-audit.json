@@ -1,0 +1,105 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\.9f74968b4c9d36c2e3bcf6ac1db7fa5b197133cc-audit.json",
+    "files": [
+        {
+            "date": 1697470660324,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-16-21-error.log",
+            "hash": "0ff28e613f33fc471cd7254f41bd1dd34da2f691e440ac1290cecd5c4c1f122c"
+        },
+        {
+            "date": 1697521465910,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-17-11-error.log",
+            "hash": "72ae83cd204a5603c58183b224a55f5e892af287f2fe67ed9c192505eb3eb732"
+        },
+        {
+            "date": 1697558373108,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-17-21-error.log",
+            "hash": "ec3e06d33fe336759d547316b4bee8ca9e74127e3e18c9877157126e7dc1308a"
+        },
+        {
+            "date": 1697563521303,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-17-23-error.log",
+            "hash": "2cdbb3ddac0f7b635496ffe33e9bcba011d536d46d9d024372e243cfac8f7721"
+        },
+        {
+            "date": 1697566016430,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-18-00-error.log",
+            "hash": "1c4a39bfdd9c9f970d9f0f0d9840f82229b8c07d042f79cb5963ea6b258ff773"
+        },
+        {
+            "date": 1697623486729,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-18-16-error.log",
+            "hash": "f780cc326a6576de03f39303fb2857892ccf167ee0efc8697dcbe6952998fa82"
+        },
+        {
+            "date": 1697649513030,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-18-23-error.log",
+            "hash": "9b1f2d9c06ab003a364f86cf546362ab44cb056ed2deddf2f2da70f9cc466330"
+        },
+        {
+            "date": 1697661528054,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-02-error.log",
+            "hash": "1c3f3d72c9b55c3093d5b366f5b760e25543ee193abb239c18ba2f5d864b3b35"
+        },
+        {
+            "date": 1697663265319,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-03-error.log",
+            "hash": "33225b77707e4b676421599fa6455418c1bc3480553e7a9ff4d471c099ec5006"
+        },
+        {
+            "date": 1697666446008,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-04-error.log",
+            "hash": "0574ba6fd890cce7f670d64d548d31d435fcfc2fb4dcc9c34e2f9b7a9ad498a3"
+        },
+        {
+            "date": 1697675093839,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-06-error.log",
+            "hash": "ddacbdb54e2e7d6088dd5bc157231bae6de1e76963c779a70616ec1a0d10e759"
+        },
+        {
+            "date": 1697677925637,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-07-error.log",
+            "hash": "04c11ff2c5723c8b7f29a046c79573c31a525cd0d52eb2de41102000ab262b75"
+        },
+        {
+            "date": 1697707992055,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-15-error.log",
+            "hash": "4932cb5defa5540d216c5e337f0bca2be958ff3073ba1513071a9682e6e08336"
+        },
+        {
+            "date": 1697710270036,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-16-error.log",
+            "hash": "a8bfa2b93f1bb2690796d7c8c5bec08b069c1aba50f9f26e486b4cd03c3285b1"
+        },
+        {
+            "date": 1697724556643,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-20-error.log",
+            "hash": "5bd1ed5f3f6c1a8720abb62ef2cb34cd92fc3df2c01373829979b9f2cac75af0"
+        },
+        {
+            "date": 1697727734885,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-21-error.log",
+            "hash": "e4ef039fb36ef1d749f9ffd77d2baea1784ac4f5ba9034c0e16ba9cc270a3100"
+        },
+        {
+            "date": 1697735603771,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-19-23-error.log",
+            "hash": "6990227084449c59ccfd24bdd39e835babf21f56ad8f8544cc98d0ca7e08dabb"
+        },
+        {
+            "date": 1697739647845,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-20-00-error.log",
+            "hash": "9d12aa4a0ed23f61773da94443751fc3dffc9c8f6f9ce5ed676da3abda8b8184"
+        },
+        {
+            "date": 1697742590355,
+            "name": "C:\\Users\\abir\\Desktop\\assernment\\9\\server-side\\logger\\winston\\errors\\PHU-2023-10-20-01-error.log",
+            "hash": "e6be300e072d2a83b40bdd5d771bdd70a7885d5ef18312a3aed685525bb7dab6"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,21 +1,19 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import config from '../../../config';
+import ApiError from '../../errors/ApiError';
 import catchAsync from '../../share/catchAsync';
 import sendResponse from '../../share/sendResponse';
-import { ILoginUserResponse, IRefreshTokenResponse } from './auth.interface';
+import { IRefreshTokenResponse } from './auth.interface';
 import { AuthService } from './auth.service';
-import ApiError from '../../errors/ApiError';
 
 const loginUser = catchAsync(async (req: Request, res: Response) => {
   const result = await AuthService.loginUserFromDb(req.body);
   const { refreshToken, ...othersData } = result;
   // console.log(req.cookies, 13);
-
   // set refresh token into cookie
   const cookieOptions = {
     // secure: config.env === 'production' ? true :false,
-    //same
     secure: config.env === 'production',
     httpOnly: true,
   };
@@ -23,7 +21,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   res.cookie('refreshToken', refreshToken, cookieOptions);
 
   //set refre
-  sendResponse<ILoginUserResponse>(res, {
+  sendResponse<any>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'successfull login',

@@ -1,11 +1,17 @@
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express, { Application, NextFunction, Request, Response } from 'express';
-import cookieParser from 'cookie-parser';
 // import usersService from './app/modules/users/users.service'
 
 const app: Application = express();
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: ['http://localhost:3000'],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -13,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 import httpStatus from 'http-status';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 
+import path from 'path';
 import routers from './app/routes/index_route';
 
 /* app.get('/', async (req: Request, res: Response) => {
@@ -22,6 +29,10 @@ import routers from './app/routes/index_route';
 
 //Application route
 app.use('/api/v1', routers);
+app.use(
+  '/images',
+  express.static(path.join(__dirname, '../uploadFile/images/'))
+);
 
 /* app.use('/api/v1/users', UserRoute);
 app.use('/api/v1/academic-semesters', AcademicSemesterRoute); */

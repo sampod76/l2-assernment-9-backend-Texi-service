@@ -22,18 +22,20 @@ const createGeneralUserFromdb = async (
   // auto set user password
 
   user.role = ENUM_USER_ROLE.GENERAL_USER;
-  generalUser.email=user.email;
+  generalUser.email = user.email;
 
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-    
 
     //array
     const newGeneralUser = await GeneralUser.create([generalUser], { session });
     if (!newGeneralUser.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create GeneralUser');
+      throw new ApiError(
+        httpStatus.BAD_REQUEST,
+        'Failed to create GeneralUser'
+      );
     }
     //set GeneralUser -->  _id into user.GeneralUser
     user.generalUser = newGeneralUser[0]._id;
@@ -56,7 +58,7 @@ const createGeneralUserFromdb = async (
   }
 
   if (newUserAllData) {
-    newUserAllData = await User.findOne({ _id: newUserAllData._id })
+    newUserAllData = await User.findOne({ _id: newUserAllData._id });
   }
 
   return newUserAllData;
@@ -66,16 +68,15 @@ const createAdminFromDb = async (
   admin: IAdmin,
   user: IUser
 ): Promise<IUser | null> => {
-  
   user.role = ENUM_USER_ROLE.ADMIN;
 
-  admin.email=user.email;
+  admin.email = user.email;
   //Generater admin id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-  
+
     const newAdmin = await Admin.create([admin], { session });
     if (!newAdmin.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create admin');
@@ -96,7 +97,7 @@ const createAdminFromDb = async (
     throw error;
   }
   if (newUserAllData) {
-    newUserAllData = await User.findOne({ _id: newUserAllData._id })
+    newUserAllData = await User.findOne({ _id: newUserAllData._id });
   }
 
   return newUserAllData;
@@ -106,25 +107,24 @@ const createSuperAdminFromDb = async (
   admin: ISuperAdmin,
   user: IUser
 ): Promise<IUser | null> => {
-  
   user.role = ENUM_USER_ROLE.SUPER_ADMIN;
 
-  admin.email=user.email;
+  admin.email = user.email;
   //Generater admin id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-  
+
     const newAdmin = await SuperAdmin.create([admin], { session });
     if (!newAdmin.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create admin');
     }
     //user to ref admin id
-    user.supperAdmin = newAdmin[0]._id;
+    user.superAdmin = newAdmin[0]._id;
 
     const newUser = await User.create([user], { session });
-    console.log("🚀 ~ file: users.service.ts:127 ~ newUser:", newUser)
+    console.log('🚀 ~ file: users.service.ts:127 ~ newUser:', newUser);
     if (!newUser.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create admin');
     }
@@ -137,20 +137,60 @@ const createSuperAdminFromDb = async (
     throw error;
   }
   if (newUserAllData) {
-    newUserAllData = await User.findOne({ _id: newUserAllData._id })
+    newUserAllData = await User.findOne({ _id: newUserAllData._id });
   }
-  
-  console.log("🚀 ~ file: users.service.ts:140 ~ newUserAllData:", newUserAllData)
+
+  console.log(
+    '🚀 ~ file: users.service.ts:140 ~ newUserAllData:',
+    newUserAllData
+  );
   return newUserAllData;
 };
 
+const getUserByDb = async (id: string): Promise<IUser | null> => {
+  const result = await User.findOne({ _id: id }).populate([
+    {
+      path: 'superAdmin',
+      select: { createdAt: 0, updatedAt: 0, __v: 0 },
+    },
+    {
+      path: 'generalUser',
+      select: { createdAt: 0, updatedAt: 0, __v: 0 },
+    },
+    {
+      path: 'admin',
+      select: { createdAt: 0, updatedAt: 0, __v: 0 },
+    },
+  ]);
+  return result;
+};
+const updateRoleByDb = async (
+  id: string,
+  payload: Partial<any>
+): Promise<IUser | null> => {
 
+  const isExist = await User.findOne({ _id:id });
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Admin not found !');
+  }
+
+  const {  ...adminData } = payload;
+
+  const updatedStudentData: Partial<IUser> = { ...adminData };
+
+  const result = await User.findOneAndUpdate({ _id:id }, updatedStudentData, {
+    new: true,
+  });
+  return result;
+};
 
 export const UserServices = {
   createGeneralUserFromdb,
   createAdminFromDb,
-  createSuperAdminFromDb
- 
+  createSuperAdminFromDb,
+  getUserByDb,
+  updateRoleByDb
 };
 
 /* if (newUserAllData) {

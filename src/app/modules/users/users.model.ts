@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import { Schema, model } from 'mongoose';
 import config from '../../../config';
 import { IUser, /* IUserMethods, */ UserModel } from './users.interface';
+import { USER_ROLE } from './user.constant';
 
 //যখন instance method ব্যবহার করা হবে তখন Schema এভাবে ডিক্লেয়ার করতে হবে
 // const UserSchema = new Schema<IUser, Record<string, unknown>, IUserMethods>(
@@ -17,6 +18,7 @@ const UserSchema = new Schema<IUser, UserModel>(
     role: {
       type: String,
       required: true,
+      enum:USER_ROLE
     },
     password: {
       type: String,
@@ -32,9 +34,9 @@ const UserSchema = new Schema<IUser, UserModel>(
       type: Schema.Types.ObjectId,
       ref: 'GeneralUser',
     },
-    supperAdmin: {
+    superAdmin: {
       type: Schema.Types.ObjectId,
-      ref: 'SupperAdmin',
+      ref: 'SuperAdmin',
     },
     admin: {
       type: Schema.Types.ObjectId,

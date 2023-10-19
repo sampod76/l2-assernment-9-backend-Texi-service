@@ -12,7 +12,7 @@ export type IUser = {
   password: string;
   needsPasswordChange?: true | false;
   generalUser?: Types.ObjectId | IGeneralUser;
-  supperAdmin?: Types.ObjectId | ISuperAdmin;
+  superAdmin?: Types.ObjectId | ISuperAdmin;
   admin?: Types.ObjectId | IAdmin;
 };
 

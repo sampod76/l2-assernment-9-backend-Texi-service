@@ -80,16 +80,9 @@ const updateSuperAdmin = async (
     throw new ApiError(httpStatus.NOT_FOUND, 'Admin not found !');
   }
 
-  const { name, ...adminData } = payload;
+  const {  ...adminData } = payload;
 
   const updatedStudentData: Partial<ISuperAdmin> = { ...adminData };
-
-  if (name && Object.keys(name).length > 0) {
-    Object.keys(name).forEach(key => {
-      const nameKey = `name.${key}` as keyof Partial<ISuperAdmin>;
-      (updatedStudentData as any)[nameKey] = name[key as keyof typeof name];
-    });
-  }
 
   const result = await SuperAdmin.findOneAndUpdate({ _id:id }, updatedStudentData, {
     new: true,
