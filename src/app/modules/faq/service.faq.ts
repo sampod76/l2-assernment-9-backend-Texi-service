@@ -3,27 +3,28 @@ import { paginationHelper } from '../../../helper/paginationHelper';
 
 import { IGenericResponse } from '../../interface/common';
 import { IPaginationOption } from '../../interface/pagination';
+import { FAQ_SEARCHABLE_FIELDS } from './consent.faq';
+import { IFaq, IFaqFilters } from './interface.faq';
+import { Faq } from './model.faq';
 
-import { BLOG_SEARCHABLE_FIELDS } from './consent.faq';
-import { IBlog, IBlogFilters } from './interface.faq';
-import { Blog } from './model.faq';
 
-const createBlogByDb = async (payload: IBlog): Promise<IBlog> => {
-  const result = (await Blog.create(payload));
+
+const createFaqByDb = async (payload: IFaq): Promise<IFaq> => {
+  const result = (await Faq.create(payload));
   return result;
 };
 
-//getAllBlogFromDb
-const getAllBlogFromDb = async (
-  filters: IBlogFilters,
+//getAllFaqFromDb
+const getAllFaqFromDb = async (
+  filters: IFaqFilters,
   paginationOptions: IPaginationOption
-): Promise<IGenericResponse<IBlog[]>> => {
+): Promise<IGenericResponse<IFaq[]>> => {
   //****************search and filters start************/
   const { searchTerm, ...filtersData } = filters;
   const andConditions = [];
   if (searchTerm) {
     andConditions.push({
-      $or: BLOG_SEARCHABLE_FIELDS.map(field => ({
+      $or: FAQ_SEARCHABLE_FIELDS.map(field => ({
         [field]: {
           $regex: searchTerm,
           $options: 'i',
@@ -55,7 +56,7 @@ const getAllBlogFromDb = async (
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 
-  // const result = await Blog.find(whereConditions)
+  // const result = await Faq.find(whereConditions)
   //   .populate('thumbnail')
   //   .sort(sortConditions)
   //   .skip(Number(skip))
@@ -130,9 +131,9 @@ const getAllBlogFromDb = async (
   ];
 
   // console.log(pipeline);
-  const result = await Blog.aggregate(pipeline);
+  const result = await Faq.aggregate(pipeline);
   // console.log(result, 127);
-  const total = await Blog.countDocuments(whereConditions);
+  const total = await Faq.countDocuments(whereConditions);
   return {
     meta: {
       page,
@@ -143,108 +144,47 @@ const getAllBlogFromDb = async (
   };
 };
 
-// get single Bloge form db
-const getSingleBlogFromDb = async (
+// get single Faqe form db
+const getSingleFaqFromDb = async (
   id: string
-): Promise<IBlog | null> => {
+): Promise<IFaq | null> => {
   const pipeline: PipelineStage[] = [
     { $match: { _id: new Types.ObjectId(id) } },
     ///***************** */ images field ******start
-    {
-      $lookup: {
-        from: 'fileuploades',
-        let: { conditionField: '$thumbnail' }, // The field to match from the current collection
-        pipeline: [
-          {
-            $match: {
-              $expr: {
-                $eq: ['$_id', '$$conditionField'], // The condition to match the fields
-              },
-            },
-          },
-
-          // Additional pipeline stages for the second collection (optional)
-          {
-            $project: {
-              createdAt: 0,
-              updatedAt: 0,
-              userId: 0,
-            },
-          },
-          {
-            $addFields: {
-              link: {
-                $concat: [
-                  process.env.REAL_HOST_SERVER_SIDE,
-                  '/',
-                  'images',
-                  '/',
-                  '$filename',
-                ],
-              },
-            },
-          },
-        ],
-        as: 'thumbnailInfo', // The field to store the matched results from the second collection
-      },
-    },
-
-    {
-      $project: { thumbnail: 0 },
-    },
-    //মনে রাখতে হবে যদি এটি দেওয়া না হয় তাহলে সে যখন কোন একটি ক্যাটাগরির থাম্বেল না পাবে সে তাকে দেবে না
-    {
-      $addFields: {
-        thumbnail: {
-          $cond: {
-            if: { $eq: [{ $size: '$thumbnailInfo' }, 0] },
-            then: [{}],
-            else: '$thumbnailInfo',
-          },
-        },
-      },
-    },
-    {
-      $project: {
-        thumbnailInfo: 0,
-      },
-    },
-    {
-      $unwind: '$thumbnail',
-    },
+   
     ///***************** */ images field ******end*********
 
     ///
   ];
 
-  const result = await Blog.aggregate(pipeline);
+  const result = await Faq.aggregate(pipeline);
 
   return result[0];
 };
 
-// update Bloge form db
-const updateBlogFromDb = async (
+// update Faqe form db
+const updateFaqFromDb = async (
   id: string,
-  payload: Partial<IBlog>
-): Promise<IBlog | null> => {
-  const result = await Blog.findOneAndUpdate({ _id: id }, payload, {
+  payload: Partial<IFaq>
+): Promise<IFaq | null> => {
+  const result = await Faq.findOneAndUpdate({ _id: id }, payload, {
     new: true,
   });
   return result;
 };
 
-// delete Bloge form db
-const deleteBlogByIdFromDb = async (
+// delete Faqe form db
+const deleteFaqByIdFromDb = async (
   id: string
-): Promise<IBlog | null> => {
-  const result = await Blog.findByIdAndDelete(id).populate('thumbnail');
+): Promise<IFaq | null> => {
+  const result = await Faq.findByIdAndDelete(id).populate('thumbnail');
   return result;
 };
 
-export const BlogService = {
-  createBlogByDb,
-  getAllBlogFromDb,
-  getSingleBlogFromDb,
-  updateBlogFromDb,
-  deleteBlogByIdFromDb,
+export const FaqService = {
+  createFaqByDb,
+  getAllFaqFromDb,
+  getSingleFaqFromDb,
+  updateFaqFromDb,
+  deleteFaqByIdFromDb,
 };

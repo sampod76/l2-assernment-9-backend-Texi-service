@@ -62,68 +62,7 @@ const getAllBlogFromDb = async (
   //   .limit(Number(limit));
   const pipeline: PipelineStage[] = [
     { $match: whereConditions },
-    {
-      $lookup: {
-        from: 'fileuploades',
-        let: { conditionField: '$thumbnail' }, // The field to match from the current collection
-        pipeline: [
-          {
-            $match: {
-              $expr: {
-                $eq: ['$_id', '$$conditionField'], // The condition to match the fields
-              },
-            },
-          },
-
-          // Additional pipeline stages for the second collection (optional)
-          {
-            $project: {
-              createdAt: 0,
-              updatedAt: 0,
-              userId: 0,
-            },
-          },
-          {
-            $addFields: {
-              link: {
-                $concat: [
-                  process.env.REAL_HOST_SERVER_SIDE,
-                  '/',
-                  'images',
-                  '/',
-                  '$filename',
-                ],
-              },
-            },
-          },
-        ],
-        as: 'thumbnailInfo', // The field to store the matched results from the second collection
-      },
-    },
-
-    {
-      $project: { thumbnail: 0 },
-    },
-    //মনে রাখতে হবে যদি এটি দেওয়া না হয় তাহলে সে যখন কোন একটি ক্যাটাগরির থাম্বেল না পাবে সে তাকে দেবে না
-    {
-      $addFields: {
-        thumbnail: {
-          $cond: {
-            if: { $eq: [{ $size: '$thumbnailInfo' }, 0] },
-            then: [{}],
-            else: '$thumbnailInfo',
-          },
-        },
-      },
-    },
-    {
-      $project: {
-        thumbnailInfo: 0,
-      },
-    },
-    {
-      $unwind: '$thumbnail',
-    },
+   
     { $sort: sortConditions },
     { $skip: Number(skip) || 0 },
     { $limit: Number(limit) || 15 },

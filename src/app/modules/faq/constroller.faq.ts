@@ -7,107 +7,107 @@ import catchAsync from '../../share/catchAsync';
 import pick from '../../share/pick';
 import sendResponse from '../../share/sendResponse';
 
-import { BLOG_FILTERABLE_FIELDS } from './consent.faq';
-import { IBlog } from './interface.faq';
-import { BlogService } from './service.faq';
+import { FAQ_FILTERABLE_FIELDS } from './consent.faq';
+import { IFaq } from './interface.faq';
+import { FaqService } from './service.faq';
 
 // import { z } from 'zod'
-const createBlog = catchAsync(async (req: Request, res: Response) => {
+const createFaq = catchAsync(async (req: Request, res: Response) => {
   req.body.user = req.user?._id;
-  const result = await BlogService.createBlogByDb(req.body);
+  const result = await FaqService.createFaqByDb(req.body);
 
-  sendResponse<IBlog>(res, {
+  sendResponse<IFaq>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'successfull create Blog Blog',
+    message: 'successfull create Faq Faq',
     data: result,
   });
   // next();
   /* res.status(200).send({
       success: true,
       data: result,
-      message: 'successfull create Blog Blog',
+      message: 'successfull create Faq Faq',
     }); */
 });
 
-const getAllBlog = catchAsync(async (req: Request, res: Response) => {
+const getAllFaq = catchAsync(async (req: Request, res: Response) => {
   //****************search and filter start******* */
   let queryObject = req.query;
   queryObject = Object.fromEntries(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     Object.entries(queryObject).filter(([_, value]) => Boolean(value))
   );
-  const filters = pick(queryObject, BLOG_FILTERABLE_FIELDS);
+  const filters = pick(queryObject, FAQ_FILTERABLE_FIELDS);
 
   //****************pagination start************ */
 
   const paginationOptions = pick(queryObject, PAGINATION_FIELDS);
 
-  const result = await BlogService.getAllBlogFromDb(filters, paginationOptions);
+  const result = await FaqService.getAllFaqFromDb(filters, paginationOptions);
 
-  sendResponse<IBlog[]>(res, {
+  sendResponse<IFaq[]>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'successfull Get Blog Blog',
+    message: 'successfull Get Faq Faq',
     meta: result.meta,
     data: result.data,
   });
   // next();
 });
 
-const getSingleBlog = catchAsync(async (req: Request, res: Response) => {
+const getSingleFaq = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
 
   /*   if (!globalImport.ObjectId.isValid(id)) {
       throw new ApiError(400, 'invalid id sampod');
     } */
 
-  const result = await BlogService.getSingleBlogFromDb(id);
+  const result = await FaqService.getSingleFaqFromDb(id);
 
   /* if (!result) {
       throw new ApiError(400, 'No data found');
     } */
-  sendResponse<IBlog>(res, {
+  sendResponse<IFaq>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'successfull get Blog Blog',
+    message: 'successfull get Faq Faq',
     data: result,
   });
 });
-const updateBlog = catchAsync(async (req: Request, res: Response) => {
+const updateFaq = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
   const updateData = req.body;
   /*   if (!globalImport.ObjectId.isValid(id)) {
       throw new ApiError(400, 'invalid id sampod');
     } */
 
-  const result = await BlogService.updateBlogFromDb(id, updateData);
+  const result = await FaqService.updateFaqFromDb(id, updateData);
 
   /* if (!result) {
       throw new ApiError(400, 'No data found');
     } */
-  sendResponse<IBlog>(res, {
+  sendResponse<IFaq>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'successfull update Blog Blog',
+    message: 'successfull update Faq Faq',
     data: result,
   });
 });
 
-const deleteBlog = catchAsync(async (req: Request, res: Response) => {
+const deleteFaq = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
-  const result = await BlogService.deleteBlogByIdFromDb(id);
-  sendResponse<IBlog>(res, {
+  const result = await FaqService.deleteFaqByIdFromDb(id);
+  sendResponse<IFaq>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'successfull delete Blog Blog',
+    message: 'successfull delete Faq Faq',
     data: result,
   });
 });
-export const BlogController = {
-  createBlog,
-  getAllBlog,
-  getSingleBlog,
-  updateBlog,
-  deleteBlog,
+export const FaqController = {
+  createFaq,
+  getAllFaq,
+  getSingleFaq,
+  updateFaq,
+  deleteFaq,
 };

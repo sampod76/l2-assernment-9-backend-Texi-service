@@ -23,4 +23,4 @@ router
     SuperAdminController.deleteSuperAdmin
   );
 
-export const AdminRoutes = router;
+export const SuperAdminRoutes = router;

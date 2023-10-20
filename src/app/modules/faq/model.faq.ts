@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
-import { BlogModel, IBlog } from './interface.faq';
+import { FaqModel, IFaq } from './interface.faq';
 
-const BlogSchema = new Schema<IBlog, BlogModel>(
+const FaqSchema = new Schema<IFaq, FaqModel>(
   {
     title: {
       type: String,
@@ -10,7 +10,7 @@ const BlogSchema = new Schema<IBlog, BlogModel>(
     content: {
       type: String,
     },
-    comments: [String],
+
     author: {
       type: Schema.Types.ObjectId,
       ref: 'User',
@@ -29,7 +29,7 @@ const BlogSchema = new Schema<IBlog, BlogModel>(
   }
 );
 
-export const Blog = model<IBlog, BlogModel>(
-  'Blog',
-  BlogSchema
+export const Faq = model<IFaq, FaqModel>(
+  'Faq',
+  FaqSchema
 );
